@@ -1,0 +1,60 @@
+/*		スライダー
+-----------------------------------*/
+#slider{
+	position: relative;
+	width:100%;
+	overflow: hidden;
+	background: url(../../img/loading.gif) no-repeat center center;
+	clear:both;
+}
+#slider ul{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#slider li{
+	float: left;
+}
+#slider #prev,
+#slider #next{
+	position: absolute;
+	top:34%;
+	cursor: pointer;
+}
+#slider #prev{
+	left:8%;
+}
+#slider #next{
+	right:8%;
+}
+
+
+
+
+/* for script */
+#slider ul,
+#slider #next,
+#slider #prev{
+	visibility: hidden;
+}
+
+#slider .layer{
+	width: 1000px;
+	height: 360px;
+	text-align:center;
+	margin:auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../../img/dot.png) repeat 0 0 #000;
+	opacity: 0.7;
+	filter: alpha(opacity=10);
+}
+
+
+#slider {height: 360px;}
+
+div#slider li img {
+	width:1000px;
+	height:360px;
+	}

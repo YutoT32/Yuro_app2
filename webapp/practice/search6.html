@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>オリジナル-条件指定-</title>
+</head>
+
+<body>
+
+予算を入力して下さい。
+<br>
+<br>
+
+<FORM action="list6.jsp" method="POST">
+	<input type="text" name="price" size="30" maxlength="50">円
+	<br>
+	<input type="submit" value="決定" name="confirm">
+</FORM>
+
+<!-- httpで開いているかチェック -->
+<script>
+  if (location.href.match(/^file:/)) {
+    alert("Webサーバを起動して、http://localhost:8080 から開いてください");
+  }
+</script>
+
+</body>
+</html>

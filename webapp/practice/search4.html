@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>課題-条件指定-</title>
+</head>
+
+<body>
+
+メーカーを選んで下さい。
+<br>
+<br>
+
+<FORM action="list4.jsp" method="POST">
+	<input type="checkbox" value="Adidos" checked name="makerName">Adidos
+	<br>
+	<input type="checkbox" value="Beamer" name="makerName">Beamer
+	<br>
+	<input type="checkbox" value="NOVEMBRE" name="makerName">NOVEMBRE
+	<br>
+	<input type="checkbox" value="Cerina" name="makerName">Cerina
+	<br>
+	<input type="checkbox" value="melon" name="makerName">melon
+	<br>
+	<input type="checkbox" value="GUP" name="makerName">GUP
+	<br>
+	<input type="checkbox" value="Neki" name="makerName">Neki
+	<br>
+	<input type="submit" value="検索実行" name="search">
+</FORM>
+
+<!-- httpで開いているかチェック -->
+<script>
+  if (location.href.match(/^file:/)) {
+    alert("Webサーバを起動して、http://localhost:8080 から開いてください");
+  }
+</script>
+
+</body>
+</html>

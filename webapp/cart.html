@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>オリジナル-カート-</title>
+<STYLE type="text/css">
+    body {background-color:white;}
+    table {border-collapse:separate; border-spacing:2px; width:100%;}
+    th {background-color:#333333; text-align:center; font-size:large; font-weight:bold; color:white;}
+    td {background-color:#EFEFEF; font-size:normal; color:black;}
+
+    .white {background-color:#ffffff}
+    .top1{height:20px;width:100%;}
+    .top1 ul{display: flex; justify-content: right; list-style: none;}
+    .top1 li{padding: 10px; border-left:1px solid #333;}
+    .top2{height:50px;width:100%;}
+    h1{background-color:#eeeeee; text-align:center;}
+    img{text-align:center;}
+    footer{background-color:#eeeeee; width: 100%; height: 120px; text-align: center; padding: 50px 0;}
+    </STYLE>
+</head>
+
+<body>
+
+	<div class="white top1">
+		<ul class="list1">
+		<li>ログイン済み</li>
+		<li>
+			<form action="recart.jsp" method="POST">
+			  <input type="submit" value="カートを見る" name="checkcart">
+			  <input type="hidden" name="hiddenMail" value="${Mail}">
+			</form>
+		  </li>
+		</ul>
+	  </div>
+<center>
+<h1>カート</h1>
+<br><br>
+
+<FORM action="confirm.jsp" method="POST">
+	ID : <input type="text" name="id" size="30" maxlength="30">
+	<br>
+	PASSCODE : <input type="password" name="passcode" size="30" maxlength="30">
+	<br>
+	<input type="submit" value="認証" name="confirm">
+</FORM>
+
+<!-- httpで開いているかチェック -->
+<script>
+  if (location.href.match(/^file:/)) {
+    alert("Webサーバを起動して、http://localhost:8080 から開いてください");
+  }
+</script>
+</center>
+<br><br>
+    <footer>
+      <p>© 1X21C064-8 Yuto Takahashi</p>
+    </footer>
+</body>
+</html>

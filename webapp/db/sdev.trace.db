@@ -1,0 +1,860 @@
+2022-06-17 10:19:19 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "SELECT * FROMPRODUCT_STOCK[*]"
+Syntax error in SQL statement "SELECT * FROMPRODUCT_STOCK[*]"; SQL statement:
+SELECT * FROMPRODUCT_STOCK [42000-200]
+2022-06-17 10:19:52 jdbc[21]: null
+org.h2.message.DbException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.apache.taglibs.standard.tag.common.sql.DataSourceWrapper.getConnection(DataSourceWrapper.java:83)
+	at org.apache.taglibs.standard.tag.common.sql.UpdateTagSupport.getConnection(UpdateTagSupport.java:233)
+	at org.apache.taglibs.standard.tag.common.sql.UpdateTagSupport.doStartTag(UpdateTagSupport.java:116)
+	at org.apache.jsp.buy_jsp._jspService(buy_jsp.java:193)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:356)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:867)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1716)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:821)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 35 more
+2022-06-17 10:28:09 jdbc[26]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "
+条件なしの検索SQL[*]
+"
+Syntax error in SQL statement "
+条件なしの検索SQL[*]
+"; SQL statement:
+
+条件なしの検索SQL
+ [42000-200]
+2022-06-17 10:28:17 jdbc[27]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "
+条件なしの検索SQL[*]
+"
+Syntax error in SQL statement "
+条件なしの検索SQL[*]
+"; SQL statement:
+
+条件なしの検索SQL
+ [42000-200]
+2022-06-17 10:29:07 jdbc[29]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "
+条件なしの検索SQL[*]
+"
+Syntax error in SQL statement "
+条件なしの検索SQL[*]
+"; SQL statement:
+
+条件なしの検索SQL
+ [42000-200]
+2022-06-17 10:49:00 jdbc[54]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "
+	WHERE[*] MAKER_NAME='Adidos';
+"
+Syntax error in SQL statement "
+	WHERE[*] MAKER_NAME='Adidos';
+"; SQL statement:
+
+	WHERE MAKER_NAME='Adidos';
+ [42000-200]
+2022-06-23 11:35:50 jdbc[32]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRAMARY_KEY[*],
+CUSTOMER_NAME VARCHAR(100),
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000),
+PASSCODE VARCHAR(100)
+)"; 期待されるステートメント "(, NOT, NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRAMARY_KEY[*],
+CUSTOMER_NAME VARCHAR(100),
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000),
+PASSCODE VARCHAR(100)
+)"; expected "(, NOT, NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRAMARY_KEY,
+CUSTOMER_NAME VARCHAR(100),
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000),
+PASSCODE VARCHAR(100)
+) [42001-200]
+2022-06-23 11:37:25 jdbc[32]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRAMARY_KEY[*],
+CUSTOMER_NAME VARCHAR(100),
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000),
+PASSCODE VARCHAR(100),
+)"; 期待されるステートメント "(, NOT, NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRAMARY_KEY[*],
+CUSTOMER_NAME VARCHAR(100),
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000),
+PASSCODE VARCHAR(100),
+)"; expected "(, NOT, NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRAMARY_KEY,
+CUSTOMER_NAME VARCHAR(100),
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000),
+PASSCODE VARCHAR(100),
+) [42001-200]
+2022-06-23 11:38:16 jdbc[32]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY_KEY[*],
+CUSTOMER_NAME VARCHAR(100),
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000),
+PASSCODE VARCHAR(100),
+)"; 期待されるステートメント "(, NOT, NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY_KEY[*],
+CUSTOMER_NAME VARCHAR(100),
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000),
+PASSCODE VARCHAR(100),
+)"; expected "(, NOT, NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY_KEY,
+CUSTOMER_NAME VARCHAR(100),
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000),
+PASSCODE VARCHAR(100),
+) [42001-200]
+2022-06-23 11:38:53 jdbc[32]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY_KEY[*],
+CUSTOMER_NAME VARCHAR(100) NULL,
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000) NULL,
+PASSCODE VARCHAR(100),
+)"; 期待されるステートメント "(, NOT, NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY_KEY[*],
+CUSTOMER_NAME VARCHAR(100) NULL,
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000) NULL,
+PASSCODE VARCHAR(100),
+)"; expected "(, NOT, NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY_KEY,
+CUSTOMER_NAME VARCHAR(100) NULL,
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000) NULL,
+PASSCODE VARCHAR(100),
+) [42001-200]
+2022-06-23 11:39:28 jdbc[32]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+CUSTOMER_NAME VARCHAR(100) NULL,
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000) NULL,
+PASSCODE VARCHAR(100),
+)[*]"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+CUSTOMER_NAME VARCHAR(100) NULL,
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000) NULL,
+PASSCODE VARCHAR(100),
+)[*]"; expected "identifier"; SQL statement:
+CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+CUSTOMER_NAME VARCHAR(100) NULL,
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000) NULL,
+PASSCODE VARCHAR(100),
+) [42001-200]
+2022-06-23 11:40:05 jdbc[32]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+CUSTOMER_NAME VARCHAR(100) NULL,
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000) NULL,
+PASSCODE VARCHAR(100),
+)[*]"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+CUSTOMER_NAME VARCHAR(100) NULL,
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000) NULL,
+PASSCODE VARCHAR(100),
+)[*]"; expected "identifier"; SQL statement:
+CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+CUSTOMER_NAME VARCHAR(100) NULL,
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000) NULL,
+PASSCODE VARCHAR(100),
+) [42001-200]
+2022-06-23 11:40:29 jdbc[32]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+CUSTOMER_NAME VARCHAR(100) NULL,
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000) NULL,
+PASSCODE VARCHAR(100) NULL,
+)[*]"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+CUSTOMER_NAME VARCHAR(100) NULL,
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000) NULL,
+PASSCODE VARCHAR(100) NULL,
+)[*]"; expected "identifier"; SQL statement:
+CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+CUSTOMER_NAME VARCHAR(100) NULL,
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000) NULL,
+PASSCODE VARCHAR(100) NULL,
+) [42001-200]
+2022-06-23 11:41:56 jdbc[32]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+CUSTOMER_NAME VARCHAR(100) NULL,
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000) NULL,
+CUSTOMER_PASSCODE VARCHAR(100) NULL,
+)[*]"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+CUSTOMER_NAME VARCHAR(100) NULL,
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000) NULL,
+CUSTOMER_PASSCODE VARCHAR(100) NULL,
+)[*]"; expected "identifier"; SQL statement:
+CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+CUSTOMER_NAME VARCHAR(100) NULL,
+CUSTOMER_BIRTHYEAR INTEGER,
+CUSTOMER_BIRTHDAY INTEGER,
+CUSTOMER_ADDRESS VARCHAR(1000) NULL,
+CUSTOMER_PASSCODE VARCHAR(100) NULL,
+) [42001-200]
+2022-06-23 11:43:14 jdbc[32]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+CUSTOMER_NAME VARCHAR(100) NULL,
+)[*]"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+CUSTOMER_NAME VARCHAR(100) NULL,
+)[*]"; expected "identifier"; SQL statement:
+CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+CUSTOMER_NAME VARCHAR(100) NULL,
+) [42001-200]
+2022-06-23 11:43:21 jdbc[32]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+)[*]"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+)[*]"; expected "identifier"; SQL statement:
+CREATE TABLE CUSTOMER_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+) [42001-200]
+2022-06-23 11:43:33 jdbc[32]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE CUSTOMERS_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+)[*]"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE CUSTOMERS_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+)[*]"; expected "identifier"; SQL statement:
+CREATE TABLE CUSTOMERS_INFO
+(
+CUSTOMER_ID INTEGER AUTO_INCREMENT PRIMARY KEY,
+) [42001-200]
+2022-07-17 01:49:36 jdbc[36]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: 不明なデータ型: 
+Unknown data type: ; SQL statement:
+ALTER TABLE CUSTOMER_INFO
+ADD NAME[SEI] VARCHAR(50) NULL [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseAlterTableAddColumn(Parser.java:8133)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:7690)
+	at org.h2.command.Parser.parseAlter(Parser.java:6983)
+	at org.h2.command.Parser.parsePrepared(Parser.java:887)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:821)
+2022-07-17 01:50:27 jdbc[36]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: 不明なデータ型: 
+Unknown data type: ; SQL statement:
+ALTER TABLE CUSTOMER_INFO
+ADD NAME[SEI] VARCHAR(50) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseAlterTableAddColumn(Parser.java:8133)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:7690)
+	at org.h2.command.Parser.parseAlter(Parser.java:6983)
+	at org.h2.command.Parser.parsePrepared(Parser.java:887)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:821)
+2022-07-17 02:11:38 jdbc[36]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO CUSTOMER_INFO(MAIL) VALUES('waseda@gmail.com') WHERE[*] CUSTOMER_ID='1'"
+Syntax error in SQL statement "INSERT INTO CUSTOMER_INFO(MAIL) VALUES('waseda@gmail.com') WHERE[*] CUSTOMER_ID='1'"; SQL statement:
+INSERT INTO CUSTOMER_INFO(MAIL) VALUES('waseda@gmail.com') WHERE CUSTOMER_ID='1' [42000-200]
+2022-07-17 02:11:55 jdbc[36]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO CUSTOMER_INFO(MAIL) VALUES('waseda@gmail.com') WHERE[*] CUSTOMER_ID=1"
+Syntax error in SQL statement "INSERT INTO CUSTOMER_INFO(MAIL) VALUES('waseda@gmail.com') WHERE[*] CUSTOMER_ID=1"; SQL statement:
+INSERT INTO CUSTOMER_INFO(MAIL) VALUES('waseda@gmail.com') WHERE CUSTOMER_ID=1 [42000-200]
+2022-07-21 15:43:30 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "PASSCODE" が見つかりません
+Column "PASSCODE" not found; SQL statement:
+
+SELECT PASSCODE FROM CUSTOMER_INFO WHERE ID=?;
+
+ [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Select.prepare(Select.java:1206)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352)
+	at org.apache.taglibs.standard.tag.common.sql.QueryTagSupport.doEndTag(QueryTagSupport.java:214)
+	at org.apache.jsp.confirm_jsp._jspx_meth_sql_005fquery_005f0(confirm_jsp.java:346)
+	at org.apache.jsp.confirm_jsp._jspService(confirm_jsp.java:173)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:356)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:867)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1716)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:821)
+2022-07-21 20:14:18 jdbc[23]: null
+org.h2.message.DbException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.apache.taglibs.standard.tag.common.sql.DataSourceWrapper.getConnection(DataSourceWrapper.java:83)
+	at org.apache.taglibs.standard.tag.common.sql.UpdateTagSupport.getConnection(UpdateTagSupport.java:233)
+	at org.apache.taglibs.standard.tag.common.sql.UpdateTagSupport.doStartTag(UpdateTagSupport.java:116)
+	at org.apache.jsp.entry_jsp._jspx_meth_sql_005fupdate_005f0(entry_jsp.java:607)
+	at org.apache.jsp.entry_jsp._jspService(entry_jsp.java:213)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:356)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:867)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1716)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:821)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 36 more
+2022-07-21 20:14:18 jdbc[23]: null
+org.h2.message.DbException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.apache.taglibs.standard.tag.common.sql.DataSourceWrapper.getConnection(DataSourceWrapper.java:83)
+	at org.apache.taglibs.standard.tag.common.sql.UpdateTagSupport.getConnection(UpdateTagSupport.java:233)
+	at org.apache.taglibs.standard.tag.common.sql.UpdateTagSupport.doStartTag(UpdateTagSupport.java:116)
+	at org.apache.jsp.entry_jsp._jspx_meth_sql_005fupdate_005f0(entry_jsp.java:607)
+	at org.apache.jsp.entry_jsp._jspService(entry_jsp.java:213)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:356)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:867)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1716)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:821)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 36 more
+2022-07-21 21:29:51 jdbc[70]: null
+org.h2.message.DbException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.apache.taglibs.standard.tag.common.sql.DataSourceWrapper.getConnection(DataSourceWrapper.java:83)
+	at org.apache.taglibs.standard.tag.common.sql.UpdateTagSupport.getConnection(UpdateTagSupport.java:233)
+	at org.apache.taglibs.standard.tag.common.sql.UpdateTagSupport.doStartTag(UpdateTagSupport.java:116)
+	at org.apache.jsp.entry_jsp._jspx_meth_sql_005fupdate_005f0(entry_jsp.java:652)
+	at org.apache.jsp.entry_jsp._jspService(entry_jsp.java:221)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:356)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:867)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1716)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:821)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 36 more
+2022-07-21 22:42:10 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "CUSTOMER_INFO" はすでに存在します
+Table "CUSTOMER_INFO" already exists; SQL statement:
+CREATE TABLE CUSTOMER_INFO
+(
+MAIL VARCHAR(100) PRIMARY KEY
+) [42101-200]
+2022-07-22 01:13:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: データ変換中にエラーが発生しました " "
+Data conversion error converting " "; SQL statement:
+
+UPDATE PRODUCT_STOCK SET STOCK_NUM = STOCK_NUM - 1 WHERE PRODUCT_CODE = ?; [22018-200]
+2022-07-22 02:18:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "CUSTOMER_INFO" はすでに存在します
+Table "CUSTOMER_INFO" already exists; SQL statement:
+CREATE TABLE CUSTOMER_INFO
+(
+PURCHACE_CODE INTEGER AUTO_INCREMENT PRIMARY KEY
+) [42101-200]
+2022-07-22 02:20:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "PURCHASE_INFO" が見つかりません
+Table "PURCHASE_INFO" not found; SQL statement:
+ALTER TABLE PURCHASE_INFO
+ADD CUSTOMER_MAIL VARCHAR(100) [42102-200]
+2022-07-22 02:35:09 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "PURCHASE_INFO" が見つかりません
+Table "PURCHASE_INFO" not found; SQL statement:
+
+	INSERT INTO PURCHASE_INFO (PRODUCT_CODE,CUSTOMER_MAIL,PURCHASE_DATE,PRODUCT_NUM,PRICE) VALUES(?, ?, ?, ?, ?);
+	
+	
+	
+	
+	
+ [42102-200]
+2022-07-22 02:35:46 jdbc[21]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "PURCHASE_DATE" が見つかりません
+Column "PURCHASE_DATE" not found; SQL statement:
+
+	INSERT INTO PURCHACE_INFO (PRODUCT_CODE,CUSTOMER_MAIL,PURCHASE_DATE,PRODUCT_NUM,PRICE) VALUES(?, ?, ?, ?, ?);
+	
+	
+	
+	
+	
+ [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352)
+	at org.apache.taglibs.standard.tag.common.sql.UpdateTagSupport.doEndTag(UpdateTagSupport.java:156)
+	at org.apache.jsp.buy_jsp._jspService(buy_jsp.java:241)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:356)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:867)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1716)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:821)
+2022-07-22 02:36:35 jdbc[26]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "PRODUCT_NUM" が見つかりません
+Column "PRODUCT_NUM" not found; SQL statement:
+
+	INSERT INTO PURCHACE_INFO (PRODUCT_CODE,CUSTOMER_MAIL,PURCHACE_DATE,PRODUCT_NUM,PRICE) VALUES(?, ?, ?, ?, ?);
+	
+	
+	
+	
+	
+ [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352)
+	at org.apache.taglibs.standard.tag.common.sql.UpdateTagSupport.doEndTag(UpdateTagSupport.java:156)
+	at org.apache.jsp.buy_jsp._jspService(buy_jsp.java:241)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:356)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:867)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1716)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:821)
+2022-07-22 02:39:30 jdbc[33]: exception
+org.h2.jdbc.JdbcSQLDataException: データ変換中にエラーが発生しました "'7500*2' (PURCHACE_INFO: ""PRICE"" INTEGER)"
+Data conversion error converting "'7500*2' (PURCHACE_INFO: ""PRICE"" INTEGER)"; SQL statement:
+
+	INSERT INTO PURCHACE_INFO (PRODUCT_CODE,CUSTOMER_MAIL,PURCHACE_DATE,PRIDUCT_NUM,PRICE) VALUES(?, ?, ?, ?, ?); [22018-200]
+2022-07-22 04:02:54 jdbc[54]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "PURCHACE_INFO.PRIDUCT_CODE" が見つかりません
+Column "PURCHACE_INFO.PRIDUCT_CODE" not found; SQL statement:
+SELECT *
+FROM PURCHACE_INFO, PRODUCT_INFO
+WHERE PURCHACE_INFO.CUSTOMER_MAIL='waseda@gmail.com' and PURCHACE_INFO.PRIDUCT_CODE=PRODUCT_INFO [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:190)
+	at org.h2.expression.condition.ConditionAndOr.optimize(ConditionAndOr.java:136)
+	at org.h2.command.dml.Select.prepare(Select.java:1209)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:821)
+2022-07-22 04:02:54 jdbc[54]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "PRODUCT_CODE[*]"; 期待されるステートメント "PREPARE"
+Syntax error in SQL statement "PRODUCT_CODE[*]"; expected "PREPARE"; SQL statement:
+PRODUCT_CODE [42001-200]
+2022-07-22 04:05:07 jdbc[54]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "PRODUCT_INFO" が見つかりません
+Column "PRODUCT_INFO" not found; SQL statement:
+SELECT *
+FROM PURCHACE_INFO, PRODUCT_INFO
+WHERE PURCHACE_INFO.CUSTOMER_MAIL='waseda@gmail.com' and PURCHACE_INFO.PRODUCT_CODE=PRODUCT_INFO [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:191)
+	at org.h2.expression.condition.ConditionAndOr.optimize(ConditionAndOr.java:136)
+	at org.h2.command.dml.Select.prepare(Select.java:1209)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:821)
+2022-07-22 04:05:07 jdbc[54]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "PRODUCT_CODE[*]"; 期待されるステートメント "PREPARE"
+Syntax error in SQL statement "PRODUCT_CODE[*]"; expected "PREPARE"; SQL statement:
+PRODUCT_CODE [42001-200]
+2022-07-22 04:12:04 jdbc[67]: null
+org.h2.message.DbException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.apache.taglibs.standard.tag.common.sql.DataSourceWrapper.getConnection(DataSourceWrapper.java:83)
+	at org.apache.taglibs.standard.tag.common.sql.QueryTagSupport.getConnection(QueryTagSupport.java:275)
+	at org.apache.taglibs.standard.tag.common.sql.QueryTagSupport.doStartTag(QueryTagSupport.java:160)
+	at org.apache.jsp.relist_jsp._jspx_meth_sql_005fquery_005f0(relist_jsp.java:348)
+	at org.apache.jsp.relist_jsp._jspService(relist_jsp.java:156)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:777)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:356)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:867)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1716)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:821)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: アプリケーションにより閉じられていない接続がガベージコレクトされました
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 36 more

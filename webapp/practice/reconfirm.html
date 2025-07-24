@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>オリジナル-ログイン認証-</title>
+</head>
+
+<body>
+
+IDとPASSCODEを入力してください。
+<br>
+認証失敗しました。再度入力してください。
+<br>
+
+<FORM action="confirm.jsp" method="POST">
+	ID : <input type="text" name="id" size="30" maxlength="30">
+	<br>
+	PASSCODE : <input type="password" name="passcode" size="30" maxlength="30">
+	<br>
+	<input type="submit" value="認証" name="confirm">
+</FORM>
+
+<!-- httpで開いているかチェック -->
+<script>
+  if (location.href.match(/^file:/)) {
+    alert("Webサーバを起動して、http://localhost:8080 から開いてください");
+  }
+</script>
+
+</body>
+</html>

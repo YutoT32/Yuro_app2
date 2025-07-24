@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>オリジナル-ログイン認証-</title>
+
+<style>
+.outer{display: flex; justify-content: center; align-items: center;}
+.inner{text-align: center;}
+</style>
+</head>
+
+<body>
+
+<div class="outer">
+	<div class="inner">
+
+	<h1>ログイン</h1>
+	<font color="red">認証失敗しました。再度入力してください。</font><br>
+	<FORM action="login.jsp" method="POST">
+		<p><input type="text" name="Mail" size="30" maxlength="50" placeholder="メールアドレス"></p>
+		<p><input type="password" name="Pass" size="30" maxlength="50" placeholder="パスワード"></p>
+		<p><input type="submit" value="ログイン" name="login"></p>
+	</FORM>
+	
+	<hr>
+	
+	<p>
+	まだ会員登録していない方はこちら
+	<form action="entry.html" method="POST">
+		<input type="submit" value="新規会員登録">
+	</form>
+	</p>
+
+	</div>
+</div>
+
+<!-- httpで開いているかチェック -->
+<script>
+  if (location.href.match(/^file:/)) {
+    alert("Webサーバを起動して、http://localhost:8080 から開いてください");
+  }
+</script>
+
+</body>
+</html>
